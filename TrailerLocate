@@ -1,0 +1,77 @@
+import java.util.Random;
+import java.util.Scanner;
+public class TrailerLocate {
+    public static void main(String[] args) {
+        String stoneTrailer;
+        String woodTrailer;
+        String tileTrailer;
+        String pickNPackTrailer;
+        String accessoryTrailer;
+        int selection;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Trailer Type\n" +
+                    "1. Stone Trailer \n" +
+                    "2. Wood Trailer \n" +
+                    "3. Tile Trailer \n" +
+                    "4. PickNPack Trailer \n" +
+                    "5. Accessory Trailer\n" +
+                    "6. End");
+            selection = sc.nextInt();
+            switch (selection) {
+                case 1:
+                    int stoneMin = 1;
+                    int stoneMax = 40;
+                    System.out.println("Enter Trailer Number");
+                    sc = new Scanner(System.in);
+                    stoneTrailer = sc.nextLine();
+                    int stoneRandom_Int = (int) Math.floor(Math.random() * (stoneMax - stoneMin + 1) + stoneMin);
+                    System.out.println("Trailer " + stoneTrailer + " at door " + stoneRandom_Int);
+                    break;
+                case 2:
+                    int woodMin = 41;
+                    int woodMax = 80;
+                    System.out.println("Enter Trailer Number");
+                    sc = new Scanner(System.in);
+                    woodTrailer = sc.nextLine();
+                    int woodRandom_Int = (int) Math.floor(Math.random() * (woodMax - woodMin + 1) + woodMin);
+                    System.out.println("Trailer " + woodTrailer + " at door " + woodRandom_Int);
+                    break;
+                case 3:
+                    int tileMin = 81;
+                    int tileMax = 120;
+                    System.out.println("Enter Trailer Number");
+                    sc = new Scanner(System.in);
+                    tileTrailer = sc.nextLine();
+
+                    int tileRandom_Int = (int) Math.floor(Math.random() * (tileMax - tileMin + 1) + tileMin);
+                    System.out.println("Trailer " + tileTrailer + " at door " + tileRandom_Int);
+                    break;
+                case 4:
+                    int pickNPackMin = 121;
+                    int pickNPackMax = 160;
+                    System.out.println("Enter Trailer Number");
+                    sc = new Scanner(System.in);
+                    pickNPackTrailer = sc.nextLine();
+
+                    int pickNPackRandom_Int = (int) Math.floor(Math.random() * (pickNPackMax - pickNPackMin + 1) + pickNPackMin);
+                    System.out.println("Trailer " + pickNPackTrailer + " at door " + pickNPackRandom_Int);
+                    break;
+                case 5:
+                    int accessoryMin = 121;
+                    int accessoryMax = 160;
+                    System.out.println("Enter Trailer Number");
+                    sc = new Scanner(System.in);
+                    accessoryTrailer = sc.nextLine();
+
+                    int accessoryRandom_Int = (int) Math.floor(Math.random() * (accessoryMax - accessoryMin + 1) + accessoryMin);
+                    System.out.println("Trailer " + accessoryTrailer + " at door " + accessoryRandom_Int);
+                    break;
+                case 6:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        } while (selection != 6);
+    }
+}
